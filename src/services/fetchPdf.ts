@@ -16,13 +16,6 @@ export const fetchPdf = async (
         saldo: user?.saldo,
         qrcode: qrCode,
       },
-      {
-        withCredentials: true,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
-      },
     );
 
     setPdf(response.data);
