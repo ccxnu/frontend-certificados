@@ -5,3 +5,11 @@ export interface User {
   saldo: number;
   qrCode?: string;
 }
+
+export type QRCode = {
+  data: string;
+};
+
+export type PDF = {
+  data: string;
+};

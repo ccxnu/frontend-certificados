@@ -1,8 +1,10 @@
 import { base64ToArrayBuffer } from "./base64toArrayBuffer";
+import type { PDF } from "../type";
 
-export const generatePdf = async (userId: string, pdf: string) => {
+export const generatePdf = async (userId: string, pdf: PDF) => {
   // Crear un Blob a partir del PDF en base64
-  const blob = new Blob([base64ToArrayBuffer(pdf)], {
+  const pdfData = pdf.data;
+  const blob = new Blob([base64ToArrayBuffer(pdfData)], {
     type: "application/pdf",
   });
 
